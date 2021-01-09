@@ -6,6 +6,9 @@
 html {
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
     Sans-Serif;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 * {
@@ -318,8 +321,8 @@ body {
   height: 500px;
 
   h5 {
-  font-size: 1.4rem;
-  font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: bold;
   }
 
   p {
