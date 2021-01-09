@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -15,7 +15,7 @@
 
   <body>
     <!-- THE TOP BAR W/ THE SEARCH AND SIGN UP AND LOG IN BUTTONS -->
-    <header id="top-bar">
+    <header id="top-bar" class="container">
       <form action="">
         <input
           type="text"
@@ -29,7 +29,7 @@
     </header>
 
     <!-- INTRO AND THOSE BOXES WITH THE CODE ANIMATION -->
-    <section id="intro" class="mid">
+    <section id="intro" class="mid container">
       <div id="not-media">
         <img src="" alt="3d cube" width="30px" />
         <h2>The best place to build, test and discover front-end code.</h2>
@@ -59,7 +59,7 @@
     </section>
 
     <!-- THE FIRST ROW OF THINGS -->
-    <section id="first-row" class="mid">
+    <section id="first-row" class="mid container">
       <div class="finz">
         <img src="" alt="" width="30" />
         <h4>Build & Test</h4>
@@ -95,51 +95,49 @@
     </section>
 
     <!-- 3 x 2 GRID OF USERS' WORK -->
-    <section id="eg" class="mid">
-      <div class="grr">
-        <h3>
-          Find inspiration from 1.8 million+ front-end designers and developers.
-        </h3>
-        <p>
-          Browse and share work from world-class designers and developers in the
-          front-end community.
-        </p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
-      </div>
-      <div class="grr">
-        <!-- images and background -->
-        <h5></h5>
-        <p></p>
+    <section id="eg" class="mid container">
+      <div id="user-work">
+        <div class="grr">
+          <h3>
+            Find inspiration from 1.8 million+ front-end designers and
+            developers.
+          </h3>
+          <p>
+            Browse and share work from world-class designers and developers in
+            the front-end community.
+          </p>
+        </div>
+        <div class="grr">
+          <!-- images and background -->
+          <h5></h5>
+          <p></p>
+        </div>
+        <div class="grr">
+          <!-- images and background -->
+          <h5></h5>
+          <p></p>
+        </div>
+        <div class="grr">
+          <!-- images and background -->
+          <h5></h5>
+          <p></p>
+        </div>
+        <div class="grr">
+          <!-- images and background -->
+          <h5></h5>
+          <p></p>
+        </div>
+        <div class="grr">
+          <!-- images and background -->
+          <h5></h5>
+          <p></p>
+        </div>
       </div>
       <button>Next</button>
     </section>
 
     <!-- EXPLORING THE EDITOR AND SCREENSHOT -->
-    <section id="exploring" class="mid lighter">
+    <section id="exploring" class="mid lighter container">
       <p>A front-end environment made for testing and sharing</p>
       <p id="explore">Explore the Editor</p>
       <div id="ss">
@@ -174,17 +172,17 @@
             <h6>Collab Mode</h6>
           </li>
         </ul>
-        <div id="desktop">
-          <img
-            src="https://static.codepen.io/assets/packs/editor-support-9cc33b6268c0a6c897033028084e1851.png"
-            alt="desktop view"
-          />
-        </div>
+      </div>
+      <div id="desktop">
+        <img
+          src="https://static.codepen.io/assets/packs/editor-support-9cc33b6268c0a6c897033028084e1851.png"
+          alt="desktop view"
+        />
       </div>
     </section>
 
     <!-- FRAMEWORKS & LIBRARIES -->
-    <section id="libraries" class="mid">
+    <section id="libraries" class="mid container">
       <div class="lib">
         <img
           src="https://cpwebassets.codepen.io/assets/packs/react-logo-1a11776af9f9ee862af2acb87703a99f.svg"
@@ -232,7 +230,7 @@
     </section>
 
     <!-- THE WHOLE TEAM -->
-    <section id="team" class="mid lighter">
+    <section id="team" class="mid lighter container">
       <h2>Bring the Whole Team</h2>
       <p>
         Each team and team member gets all the features of a PRO membership.
@@ -246,44 +244,53 @@
         <img
           src="https://cpwebassets.codepen.io/assets/packs/airbnb-cb44d3434e60956b120c2cfd2afa9a23.png"
           alt="airbnb"
+          width="68px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/grubhub-f05150a98afe6175f221f4bc75ac3372.png"
           alt="grubhub"
+          width="149px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/square-e4a6fa8c30a53180c593a11aeb1618c2.png"
           alt="square"
+          width="71px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/netflix-8b4f0b76ad5ccaa1b6326267be6c396f.png"
           alt="netflix"
+          width="125px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/adobe-0d9fee1af16f2db73270e52fbdcf4fe8.png"
           alt="adobe"
+          width="72px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/salesforce-63204abcda6bd196c6a6da3bb4911510.png"
           alt="salesforce"
+          width="137px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/microsoft-0859118499110df3a66f00a999a53a40.png"
           alt="microsoft"
+          width="209px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/lyft-87acc577a28f7c5fbafbed09b543dd91.png"
           alt="lyft"
+          width="70px"
         />
         <img
           src="https://cpwebassets.codepen.io/assets/packs/ibm-c6d225a3817a57e66f67fdcb18d1fe04.png"
           alt="ibm"
+          width="121px"
         />
       </div>
     </section>
 
     <!-- JOBS -->
-    <section id="jobs" class="mid">
+    <section id="jobs" class="mid container">
       <div>
         <h5>Jobs</h5>
         <p>
@@ -321,8 +328,8 @@
 
     <!-- FOOTER -->
     <footer>
-      <div class="mid">
-        <div>
+      <div class="container">
+        <div class="mid">
           <ul>
             <li>CodePen</li>
             <li><a href="#">About</a></li>
@@ -364,5 +371,7 @@
         </div>
       </div>
     </footer>
+
+
   </body>
 </html>
