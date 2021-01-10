@@ -37,6 +37,24 @@ body {
   margin: 0 auto;
 }
 
+.dark-blue-text {
+  color: $dark-blue-text;
+}
+
+.light-blue-text {
+  color: $light-blue-text;
+}
+
+button {
+  padding: 10px 16px;
+  margin-right: 10px;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+
 /* =============
      TOP BAR
   ============= */
@@ -56,12 +74,12 @@ body {
       padding: 0.4em;
     }
 
-    button {
-      height: 40px;
-      width: 8%;
-      margin-left: 1%;
-      display: inline-block;
-    }
+    // button {
+    //   height: 40px;
+    //   width: 8%;
+    //   margin-left: 1%;
+    //   display: inline-block;
+    // }
 
     button:nth-child(3) {
       color: #fff;
@@ -142,13 +160,14 @@ body {
     background-color: #2c303a;
     border-radius: 5px;
     height: 300px;
-    padding: 30px 20px 50px 20px;
+    // padding: 30px 20px 50px 20px;
+    padding: 0px 20px 50px 20px;
     margin-bottom: 1em;
     position: relative;
 
     img {
-      position: absolute;
-      top: -20px;
+      transform: translateY(-50%);
+      margin-bottom: 10px;
       width: 75px;
       height: 75px;
       background: $bg-darker;
@@ -164,12 +183,6 @@ body {
       margin-bottom: 15px;
     }
 
-    button {
-      background-color: #444857;
-      color: #fff;
-      padding: 12px;
-      border-radius: 5px;
-    }
   }
 }
 
@@ -197,17 +210,14 @@ body {
         text-align: left;
       }
     }
+
+    .grr:nth-child(1) {
+      background-color: $bg-darker; //DELETE
+    }
   }
 
-  button {
-    display: block;
-    margin: 50px auto;
-    width: 80px;
-    border: 3px solid #ddd;
-    background-color: #131418;
-    color: #fff;
-  }
 }
+
 /* =============
     EXPLORING
 ================ */
@@ -303,6 +313,15 @@ body {
       width: 100%;
     }
   }
+
+  .lib:last-child {
+  
+    p {
+      position: relative;
+      text-align: left;
+      margin-top: 10px; //DELETE
+    }
+  }
 }
 
 /*==========
@@ -345,6 +364,7 @@ body {
 */
 #jobs {
   height: 500px;
+  padding: 45px 0;
 
   h5 {
     font-size: 1.4rem;
