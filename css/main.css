@@ -22,7 +22,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #c7c9d3;
+  color: #fff;
 }
 
 li {
@@ -31,6 +31,7 @@ li {
 
 body {
   background-color: #131417;
+  color: #fff;
   color: #fff;
 }
 
@@ -57,16 +58,25 @@ button {
   font-weight: 700;
 }
 
-h1 {
-  font-family: 'Telefon Black', sans-serif;
-  line-height: 1.1;
-  font-size: 3rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   margin-bottom: 10px;
   font-weight: normal;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: 'Telefon Black', sans-serif;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 /* =============
@@ -76,6 +86,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 70px;
   padding: 10px;
   margin-bottom: 70px;
+  padding: 1rem;
+  padding-right: 0;
 }
 
 #top-bar form {
@@ -90,7 +102,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.4em;
 }
 
-#top-bar form button:nth-child(3) {
+#top-bar form button:nth-of-type(1) {
+  color: #000000;
+  background-color: #47cf73;
+}
+
+#top-bar form button:nth-of-type(2) {
   color: #fff;
   background-color: #444857;
 }
@@ -101,12 +118,17 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
   height: 500px;
   display: grid;
+  padding: 45px 0;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2em;
 }
 
 #not-media {
   color: inherit;
+}
+
+#not-media button {
+  background-color: #47cf73;
 }
 
 #media {
@@ -156,20 +178,20 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
+  padding: 45px 0;
 }
 
 #first-row .finz {
   background-color: #2c303a;
   border-radius: 5px;
-  height: 300px;
-  padding: 0px 20px 50px 20px;
-  margin-bottom: 1em;
+  height: auto;
+  padding: 20px 30px;
+  margin: 30px 0;
   position: relative;
 }
 
 #first-row .finz img {
   transform: translateY(-50%);
-  margin-bottom: 10px;
   width: 75px;
   height: 75px;
   background: #131417;
@@ -177,12 +199,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
-#first-row .finz h4 {
+#first-row .finz p {
   margin-bottom: 15px;
 }
 
-#first-row .finz p {
-  margin-bottom: 15px;
+#first-row button {
+  background-color: #444857;
+  color: #c7c9d3;
 }
 
 /* =========
@@ -291,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1.5em;
-  margin-bottom: 30px;
+  padding: 75px 0;
 }
 
 #libraries .lib {
@@ -305,63 +328,83 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-#libraries .lib p {
+#libraries .lib h3 {
   position: absolute;
   text-align: center;
   width: 100%;
   left: 0;
-  bottom: 1rem;
+  bottom: 0.6rem;
 }
 
 #libraries .lib img {
   width: 100%;
 }
 
-#libraries .lib:last-child p {
-  position: relative;
+#libraries .lib:last-child {
+  padding: 0;
   text-align: left;
-  margin-top: 10px;
+  background-color: #131417;
+  position: relative;
+}
+
+#libraries .lib:last-child p {
+  text-align: left;
+}
+
+#libraries .lib:last-child span {
+  position: absolute;
+  bottom: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 /*==========
    TEAM
 ===========*/
-#team {
+#teamwrap {
+  padding: 45px 0;
+}
+
+#teamwrap #team {
   height: auto;
   text-align: center;
-  padding: 30px;
+  padding: 45px;
   border-radius: 5px;
-  margin-top: 120px;
   background-color: #1e1f26;
 }
 
-#team p:first-of-type {
+#teamwrap #team p:first-of-type {
   width: 45%;
   text-align: center;
   margin: 0 auto 20px auto;
 }
 
-#team p:last-of-type {
+#teamwrap #team p:last-of-type {
   margin-top: 35px;
 }
 
-#team #companies {
+#teamwrap #team #companies {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 
-#team #companies img {
+#teamwrap #team #companies img {
   padding: 15px;
 }
 
+#teamwrap #team button {
+  background-color: #47cf73;
+}
+
 /*=============
-      JOBS
-  =============
+JOBS
+=============
 */
 #jobs {
-  height: 500px;
+  overflow: hidden;
+  padding: 45px 0;
 }
 
 #jobs h5 {
@@ -399,15 +442,20 @@ h1, h2, h3, h4, h5, h6 {
 
 #jobs li:last-child {
   border: none;
-  margin-top: 15px;
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+#jobs button {
+  background-color: #47cf73;
 }
 
 /*==========
   FOOTER
 =============*/
 footer {
-  height: 200px;
-  padding: 50px 0;
+  height: 170px;
+  padding: 40px 0;
   background-color: #000000;
 }
 
@@ -426,12 +474,13 @@ footer > div div:nth-child(1) ul {
 }
 
 footer > div div:nth-child(1) ul li {
-  display: inline-block;
   margin-right: 8px;
+  color: red;
 }
 
-footer > div div:nth-child(1) ul li:nth-child(1) {
+footer > div div:nth-child(1) ul h4 {
   margin-right: 16px;
+  color: #fff;
 }
 
 footer > div div:nth-child(2) {

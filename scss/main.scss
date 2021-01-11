@@ -28,7 +28,7 @@ li {
 
 body {
   background-color: $bg-darker;
-  // color: $white-text;
+  color: $white-text;
   color: #fff;
 }
 
@@ -55,16 +55,25 @@ button {
   font-weight: 700;
 }
 
-h1 {
-  font-family: 'Telefon Black', sans-serif;
-  line-height: 1.1;
-  font-size: 3rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   margin-bottom: 10px;
   font-weight: normal;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: 'Telefon Black', sans-serif;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 /* =============
@@ -74,6 +83,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 70px;
   padding: 10px;
   margin-bottom: 70px;
+  padding: 1rem;
+  padding-right: 0;
 
   form {
     display: flex;
@@ -86,14 +97,12 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0.4em;
     }
 
-    // button {
-    //   height: 40px;
-    //   width: 8%;
-    //   margin-left: 1%;
-    //   display: inline-block;
-    // }
+    button:nth-of-type(1) {
+      color: $black-text;
+      background-color: $button-green-bg;
+    }
 
-    button:nth-child(3) {
+    button:nth-of-type(2) {
       color: #fff;
       background-color: $button-grey-bg;
     }
@@ -106,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
   height: 500px;
   display: grid;
+  padding: 45px 0;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2em;
 }
@@ -114,6 +124,10 @@ h1, h2, h3, h4, h5, h6 {
   // float: left;
   // width: 45%;
   color: inherit;
+
+  button {
+    background-color: $button-green-bg;
+  }
 }
 
 #media {
@@ -167,19 +181,18 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
+  padding: 45px 0;
 
   .finz {
     background-color: #2c303a;
     border-radius: 5px;
-    height: 300px;
-    // padding: 30px 20px 50px 20px;
-    padding: 0px 20px 50px 20px;
-    margin-bottom: 1em;
+    height: auto;
+    padding: 20px 30px;
+    margin: 30px 0;
     position: relative;
 
     img {
       transform: translateY(-50%);
-      margin-bottom: 10px;
       width: 75px;
       height: 75px;
       background: $bg-darker;
@@ -187,25 +200,29 @@ h1, h2, h3, h4, h5, h6 {
       border-radius: 10px;
     }
 
-    h4 {
-      margin-bottom: 15px;
-    }
+    // h2 {
+    //   margin-bottom: 15px;
+    // }
 
     p {
       margin-bottom: 15px;
     }
+  }
 
+  button {
+    background-color: $button-grey-bg;
+    color: $whitish;
   }
 }
 
 /* =========
     3 x 2 GRID [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
  ========== */
- 
+
 #eg {
   visibility: hidden; //TO
   position: absolute; //MAKE IT
-  top: -10000px;   //HIDDEN
+  top: -10000px; //HIDDEN
 
   #user-work {
     display: grid;
@@ -234,13 +251,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-
 /* =============
     EXPLORING [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
 ================ */
 #exploring {
-  position: absolute;  //HIDE
-  visibility: hidden;  //IT
+  position: absolute; //HIDE
+  visibility: hidden; //IT
   height: 750px;
   margin-bottom: 70px;
   padding: 10px 30px;
@@ -308,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1.5em;
-  margin-bottom: 30px;
+  padding: 75px 0;
 
   .lib {
     display: flex;
@@ -320,12 +336,12 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     text-align: center;
 
-    p {
+    h3 {
       position: absolute;
       text-align: center;
       width: 100%;
       left: 0;
-      bottom: 1rem;
+      bottom: 0.6rem;
     }
 
     img {
@@ -334,11 +350,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .lib:last-child {
-  
+    padding: 0;
+    text-align: left;
+    background-color: $bg-darker;
+    position: relative;
+
     p {
-      position: relative;
       text-align: left;
-      margin-top: 10px; //DELETE
+      // margin-bottom: 10px;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
   }
 }
@@ -346,44 +372,51 @@ h1, h2, h3, h4, h5, h6 {
 /*==========
    TEAM
 ===========*/
-#team {
-  height: auto;
-  text-align: center;
-  padding: 30px;
-  border-radius: 5px;
-  margin-top: 120px;
-  background-color: $bg-dark;
-
-  p:first-of-type {
-    width: 45%;
+#teamwrap {
+  padding: 45px 0;
+  #team {
+    height: auto;
     text-align: center;
-    margin: 0 auto 20px auto;
-  }
+    padding: 45px;
+    border-radius: 5px;
+    background-color: $bg-dark;
 
-  p:last-of-type {
-    margin-top: 35px;
-  }
+    p:first-of-type {
+      width: 45%;
+      text-align: center;
+      margin: 0 auto 20px auto;
+    }
 
-  #companies {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+    p:last-of-type {
+      margin-top: 35px;
+    }
 
-    img {
-      // margin-right: 10px;
-      padding: 15px;
+    #companies {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        // margin-right: 10px;
+        padding: 15px;
+      }
+    }
+
+    button {
+      background-color: $button-green-bg;
     }
   }
 }
 
 /*=============
-      JOBS
-  =============
+JOBS
+=============
 */
 #jobs {
-  height: 500px;
-  // padding: 45px 0; //DO THIS FOR THE OTHER SECTIONS O!!!!!!
+  // height: 500px;
+  overflow: hidden;
+  padding: 45px 0;
 
   h5 {
     font-size: 1.4rem;
@@ -420,7 +453,12 @@ h1, h2, h3, h4, h5, h6 {
 
   li:last-child {
     border: none;
-    margin-top: 15px;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+
+  button {
+    background-color: $button-green-bg;
   }
 }
 
@@ -429,8 +467,8 @@ h1, h2, h3, h4, h5, h6 {
 =============*/
 
 footer {
-  height: 200px;
-  padding: 50px 0;
+  height: 170px;
+  padding: 40px 0;
   background-color: $black-text;
 
   & > div {
@@ -443,14 +481,17 @@ footer {
       ul {
         display: flex;
         left: 0px;
-
+                
         li {
-          display: inline-block;
+          // display: inline-block;
           margin-right: 8px;
+          // color: $whitish !important;
+          color: red;
         }
-
-        li:nth-child(1) {
+        
+        h4 {
           margin-right: 16px;
+          color: $white-text;
         }
       }
     }
