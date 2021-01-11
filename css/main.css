@@ -2,6 +2,11 @@
 @import url("../fonts/Lucida Sans Unicode.ttf");
 @import url("../fonts/LucidaGrande.ttf");
 @import url("../fonts/LucidaGrandeBold.ttf");
+@font-face {
+  font-family: 'Telefon Black';
+  src: url("../fonts/TelefonTrial-Black.otf");
+}
+
 html {
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   line-height: 1.5;
@@ -26,7 +31,7 @@ li {
 
 body {
   background-color: #131417;
-  color: #c7c9d3;
+  color: #fff;
 }
 
 .container {
@@ -50,6 +55,18 @@ button {
   border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 700;
+}
+
+h1 {
+  font-family: 'Telefon Black', sans-serif;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 /* =============
@@ -169,38 +186,44 @@ button {
 }
 
 /* =========
-    3 x 2 GRID
+    3 x 2 GRID [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
  ========== */
+#eg {
+  visibility: hidden;
+  position: absolute;
+  top: -10000px;
+}
+
 #eg #user-work {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 2em;
-  row-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 4rem 3rem;
   background-color: red;
 }
 
-#eg #user-work .grr {
+#eg #user-work .sample {
   height: 300px;
   background-color: blue;
-  visibility: none;
 }
 
-#eg #user-work .grr h3 {
+#eg #user-work .sample h3 {
   text-align: left;
 }
 
-#eg #user-work .grr p {
+#eg #user-work .sample p {
   text-align: left;
 }
 
-#eg #user-work .grr:nth-child(1) {
+#eg #user-work .sample:nth-child(1) {
   background-color: #131417;
 }
 
 /* =============
-    EXPLORING
+    EXPLORING [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
 ================ */
 #exploring {
+  position: absolute;
+  visibility: hidden;
   height: 750px;
   margin-bottom: 70px;
   padding: 10px 30px;
@@ -339,7 +362,6 @@ button {
 */
 #jobs {
   height: 500px;
-  padding: 45px 0;
 }
 
 #jobs h5 {

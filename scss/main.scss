@@ -28,7 +28,8 @@ li {
 
 body {
   background-color: $bg-darker;
-  color: $white-text;
+  // color: $white-text;
+  color: #fff;
 }
 
 .container {
@@ -54,6 +55,17 @@ button {
   font-weight: 700;
 }
 
+h1 {
+  font-family: 'Telefon Black', sans-serif;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
 
 /* =============
      TOP BAR
@@ -187,20 +199,25 @@ button {
 }
 
 /* =========
-    3 x 2 GRID
+    3 x 2 GRID [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
  ========== */
+ 
 #eg {
+  visibility: hidden; //TO
+  position: absolute; //MAKE IT
+  top: -10000px;   //HIDDEN
+
   #user-work {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2em;
-    row-gap: 2em;
+    // grid-template-columns: repeat(3, 1fr); //mine
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); //theirs
+    grid-gap: 4rem 3rem;
     background-color: red;
+    // height: 600px;
 
-    .grr {
+    .sample {
       height: 300px;
       background-color: blue;
-      visibility: none;
 
       h3 {
         text-align: left;
@@ -211,17 +228,19 @@ button {
       }
     }
 
-    .grr:nth-child(1) {
+    .sample:nth-child(1) {
       background-color: $bg-darker; //DELETE
     }
   }
-
 }
 
+
 /* =============
-    EXPLORING
+    EXPLORING [[[[[[[[[[[**  HIDDEN  **]]]]]]]]]]]]]]]
 ================ */
 #exploring {
+  position: absolute;  //HIDE
+  visibility: hidden;  //IT
   height: 750px;
   margin-bottom: 70px;
   padding: 10px 30px;
@@ -364,7 +383,7 @@ button {
 */
 #jobs {
   height: 500px;
-  padding: 45px 0;
+  // padding: 45px 0; //DO THIS FOR THE OTHER SECTIONS O!!!!!!
 
   h5 {
     font-size: 1.4rem;
