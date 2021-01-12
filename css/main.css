@@ -56,6 +56,9 @@ button {
   border: 1px solid transparent;
   border-radius: 4px;
   font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
 }
 
 h1,
@@ -69,9 +72,15 @@ h6 {
   font-weight: normal;
 }
 
+h1 {
+  font-family: "Telefon Black", Sans-Serif;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+
 h2 {
   font-size: 1.8rem;
-  font-family: 'Telefon Black', sans-serif;
+  font-family: "Telefon Black", sans-serif;
 }
 
 h3 {
@@ -96,10 +105,23 @@ h3 {
 
 #top-bar form [type="text"] {
   height: 40px;
-  width: 80%;
+  width: 100%;
+  margin-right: .5rem;
   border-radius: 5px;
   border: 0px solid;
   padding: 0.4em;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-indent: 2em;
+  background-color: #252830;
+}
+
+#top-bar form [placeholder='Search Codepen...'] {
+  color: #fff !important;
+}
+
+#top-bar form::placeholder {
+  color: #fff;
 }
 
 #top-bar form button:nth-of-type(1) {
@@ -127,6 +149,16 @@ h3 {
   color: inherit;
 }
 
+#not-media p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #c7c9d3;
+}
+
+#not-media p strong {
+  color: #fff;
+}
+
 #not-media button {
   background-color: #47cf73;
 }
@@ -136,13 +168,21 @@ h3 {
   position: relative;
 }
 
+#media img {
+  position: absolute;
+  width: 600px;
+  bottom: -480px;
+  right: -90px;
+  z-index: -10;
+}
+
 #back {
   width: 90%;
   height: 400px;
   border-radius: 15px;
   position: absolute;
   right: 0;
-  background-color: #4c4f5a;
+  background: linear-gradient(109.61deg, #4c4f5a 4.26%, #202125 84.84%);
 }
 
 .animated {
@@ -151,7 +191,6 @@ h3 {
   border-radius: 15px;
   background-color: #1d1e22;
   position: absolute;
-  z-index: 10;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
@@ -315,6 +354,7 @@ h3 {
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1.5em;
   padding: 75px 0;
+  position: relative;
 }
 
 #libraries .lib {
@@ -326,6 +366,7 @@ h3 {
   border-radius: 5px;
   position: relative;
   text-align: center;
+  z-index: 100;
 }
 
 #libraries .lib h3 {
@@ -340,22 +381,30 @@ h3 {
   width: 100%;
 }
 
-#libraries .lib:last-child {
+#libraries #lastlib {
   padding: 0;
   text-align: left;
   background-color: #131417;
   position: relative;
 }
 
-#libraries .lib:last-child p {
+#libraries #lastlib p {
   text-align: left;
 }
 
-#libraries .lib:last-child span {
+#libraries #lastlib span {
   position: absolute;
   bottom: 0;
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+#libraries img:last-child {
+  position: absolute;
+  width: 900px;
+  left: -100px;
+  bottom: -70px;
+  z-index: -10;
 }
 
 /*==========
@@ -399,7 +448,7 @@ h3 {
 }
 
 /*=============
-JOBS
+    JOBS
 =============
 */
 #jobs {
